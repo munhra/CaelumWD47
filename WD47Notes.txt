@@ -305,6 +305,8 @@ var $_span = document.createElement("span");
 $_span.textContent = "R$120";
 $_span.style.display = "block"; // muda para block
 
+$_p.insertBefore($span);
+
 ********************
 Just a linkedin test
 
