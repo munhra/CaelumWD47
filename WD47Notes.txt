@@ -303,6 +303,7 @@ Criar um elemento pelo javascript
 var $_p = document.createElement("p");
 var $_span = document.createElement("span");
 $_span.textContent = "R$120";
+$_span.style.display = "block"; // muda para block
 
 ********************
 Just a linkedin test
