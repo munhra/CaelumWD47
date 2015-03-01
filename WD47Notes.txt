@@ -381,6 +381,12 @@ object =
 declarando RGEX
 var regex = / / 
 
+Criando elemento ja colocar o event listener, mas pode gerar
+um problema de ter muitos listeners
+
+$("<input>").on("input")
+
+
 *****************
 Just a linkedin test
 

@@ -18,7 +18,7 @@ for (var i=0 ; i < inputs.length ; i++){
 
 } */
 
-
+/* Sem for apenas pegando o evento lembv*/
 var ul = document.querySelector("#carrinho");
 
 ul.addEventListener("input",function(event){
@@ -29,7 +29,7 @@ ul.addEventListener("input",function(event){
 	
 	if ($origem.tagName == "INPUT"){
 		console.log("Change number");
-		//$origem.value.replace(naoNumericos,"");
+
 		$origem.value = $origem.value.replace(naoNumericos,"");
 	}
 	
