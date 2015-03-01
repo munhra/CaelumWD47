@@ -311,7 +311,7 @@ $_p.insertBefore($span);
 
 
 
-********************
+*****************
 Just a linkedin test
 
 Worked since middle 2014 on a Content Management System, using nodejs, angular and bootstrap. 
