@@ -1,0 +1,316 @@
+22/02/15
+
+Marco Bruno
+marco.bruno@caelum.com.br
+
+login:web5070
+senha:web5070
+
+Curso WD47
+
+
+CasperJS framework de teste para javascript
+
+Definição de HTML5 é a junção de EC6 e CSS3
+Plataforma do alura é a Gnarius
+
+Java começou no netscape, competiu com o IE a muito tempo
+atrás e ai surgiu o javascript e o VBScript, o java do javascript
+é só uma questão de marketing
+
+o VBscript virou JScript, e disso tudo saiu um comite o ECMA6 ou 
+ECMA-262 ou ECMAScript com especificações, e só sobrou o javascript.
+
+HTML cuida de estrutura, marcação(tag), estrutura, semantica, 
+conteudo tudo isso é HTML
+
+CSS cuida do visual e agora da animação, não precisamos
+mais usar animação no javscript
+
+JAVASCRIPT interação e comportamento, lógica
+http://www.ecmascript.org/docs.php
+Exemplo de um arquivo html, pega a última versão
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Teste</title>
+		<script>
+			alert ("primeiro");	
+		</script>	
+
+	</head>ls
+	<body>
+
+		<p> Hello World </p>
+		<script>
+			alert ("last");	
+		</script>	
+	</body>
+
+
+</html>
+
+
+
+no debug do chrome tem autocomplete
+
+Colocando mascara de valor
+
+var valorFloat = 100.0
+//valorFloat.toFixed(2);
+//valorFloat.toFixed(2).replace(".",","); //
+"R$"+valorFloat.toFixed(2).replace(".",","); // numa linha só
+
+Como descobrir o tipo da variável, usar o operador typeof,
+podemos mudar o tipo da variável dinamicamente a qualquer momento
+do codigo.
+
+Verificar o tipo da variavel
+
+var salario = "20";
+
+function isNumberSring(salario){
+	
+	if (typeof salario == "number") {
+	
+		console.log("você escreveu um número")
+
+	}else{
+	
+		console.log("você escreveu uma string");
+	}
+
+}
+
+
+Sem paranteses não chama a função, imprime o conteúdo
+
+
+10 == 10 verdadeiro valor igual
+10 == "10" verdadeiro valor igual
+"10" === 10 falso tipo diferente
+10 != "10" falso valor é igual
+10 !== "10" verdadeiro 
+
+Dica de manutenção é evitar colocar o return de uma função em vários lugares
+de uma função, apenas quando for otimizar.
+
+podemos colocar async na carga do javascript para carregar os arquivos em paralelo
+só funciona com HTML 5.
+
+Declaração de lista literal
+
+var lista = ["Breja","Vinho","Agua", "Papel"];
+
+Percorrendo a lista de elementos, 
+
+for (var index = 0 ; index < lista.length; index++){
+	console.log(lista[index]);	
+}
+
+Esse loop é meio lento, para isso vamos usar o loop reverso
+
+var index = 0,           //coloca virgula para declarar mais variáveis ai não precisa colocar var
+max = lista.length;
+
+while (max--){
+	console.log(lista[max]);
+}
+
+criando uma função
+
+function printList(list){
+	var max = list.length;
+	while (max--){
+	console.log(lista[max]);
+	}
+}
+
+Agora com callback
+
+function loop(list, callback){
+	var max = list.length;
+	while (max--){
+		callback(lista[max]);
+	}
+}
+
+Chamando com callback temos
+
+loop(lista, function(elemement){
+
+	console.log(element);
+	
+});
+
+Um dos conceitos de orientação a eventos é o controle
+do callback
+
+Em javascript 0 é false então da para usar o max na comparação direto
+
+Sem ser literal seria
+var lista = new Array();
+
+Acessar posição no array, a lista começa sempre na posição 0
+console.log(lista[0])
+
+Inserir item na lista
+lista.push("Fralda")
+
+Atribuir um valor em qualquer posição
+lista[10] = "Salame"; // vai deixar buraco
+
+
+Tipo Regex (ER), validação de CPF com REGEX, tem alguns metodos
+regex.test() para testar a expressão regular.
+
+declaracao literal
+var regex = /^([0-9]{3})\.${1}\.${1}-[0-9]{1,2}$/
+
+var reg1 = new Regex
+
+Livro de expressão regular
+http://www.piazinho.com.br/#download
+Uma abordagem divertida de expressão regular
+desconto: pinceladasdaweb
+
+Desafio clicar na imagem e almentar
+
+<ul>
+	<li>
+		<a href="#first" id="imgfirst">
+			<figure>
+				<img src="img/first.png">
+				<figcaption>First</figcaption>
+			</figure>
+		</a>
+	</li>
+
+</ul>
+
+<ul>
+	<li id="first">
+		<img src= "img/firstBig.png" class="item">
+	</li>
+</ul>
+
+
+
+var $imgFirst = document.getElementById("imgFirst");
+$imgFirst.onclick = function(event){
+	
+	event.preventDefault();
+	//var id = $imgFirst.href;
+	var id = this.href;
+	var $first = document.getElementById(id);
+	$first.class += " is-active";
+
+}
+
+var $ul = document.querySelector("ul") //pega o primeiro
+
+$ul.addEventListener("click",function(event){
+	
+	var $origem = event.target;
+
+	if ($origem.tagName == "A"){
+		document.querySelector($origin.hash).classList.toggle("is-active");
+	}
+
+});
+
+
+
+
+document.getElementsByTagName("a");
+document.getElementsByClass("item");
+document.querySelector("a[href=#"); // retorna o primeiro
+document.querySelectorAll(".item"); // isso foi copiado do jquery
+
+
+BOM representa o BOM -> window , se quiser acessar o scroll tem que pegar pelo window
+DOM -> document Este elemento está dentro do BOM, nele encontramos as tags
+window.document é equivalente a document
+
+
+Ideia de radar para tecnologias que estão subindo e morrendo
+
+Todos os eventos tem uma injeção de dependencias
+
+01/03/2015
+
+Mais um exemplo de strutura
+
+<header>
+	<nav>
+		<ul>
+			<li>
+				<a href ="">
+					Home
+				</a>
+			</li>
+		</ul>
+		<a href = "" id="carrinho">
+			<span id="id_valor">
+				Carrinho de itens	
+			</span>
+		</a>
+	</nav>
+</header>
+
+<body>	
+	<dl>
+		<dt> Camisa </dt>
+		<dd> <img src=""></dd>
+		<dd>
+			<form action="">
+			<label> Qtd
+				<input type="text" id="qtd"> //quantidade
+			</label>
+				<input type="submit" id="btn-compra">
+
+			</form>
+
+		</dd>
+	</dl>
+
+</body>
+
+
+var $btn = document.querySelector("#btn-compra");
+var $carrinho = document.querySelector("#carrinho");
+$btn.addEventListener("submit", function(event){
+	var $qtd = document.querySelector("#qtd");
+	$carrinho.innerHTML += parseInt($qtd.value); 
+});
+
+
+Mudar a cor do background quando clica no botão
+
+var $btn = document.querySelector("#btn");
+
+$btn.addEventListener("click",function(){
+    //classListAdd,classListRemove
+	document.querySelector("body").classListToggle("fundoPreto");	
+});
+
+
+Criar um elemento pelo javascript
+// nesse momento elemento foi criado mas ainda não existe no dom
+
+var $_p = document.createElement("p");
+var $_span = document.createElement("span");
+$_span.textContent = "R$120";
+
+********************
+Just a linkedin test
+
+Worked since middle 2014 on a Content Management System, using nodejs, angular and bootstrap. 
+
+
+
+For this project is required to
+study some 
+
