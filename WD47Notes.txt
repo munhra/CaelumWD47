@@ -307,9 +307,79 @@ $_span.style.display = "block"; // muda para block
 
 $_p.insertBefore($span);
 
+Diferença entre plugin e framework
+
+framework recursos além da linguagem, pode se dizer que o JQuery é um framework, o JQuery
+ajudou a evolução do javascript. o JQuery também é opensource, tem crossbrowser, funciona
+em qualquer browser, baixa curva de aprendizado, menos verboso. 
+Não precisa saber javascript para saber JQuery
+
+Contras, piora o desempenho, limita o conhecimento de quem trabalha nele.
+
+jQuery - Exemplo, carrega no final da página mas antes de usar,
+suponha que o arquivo main.js vai usar
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+
+$("h1")
+jQuery("h1")
+
+$("h1").addClass("is-active") // antigo no jQuery
+$("h1").addClass("is-active").removeClass("is-active");
+$(".link") // similar ao query selector all no javascript
+$(".link").closest("li"); // passa o seletor com oparametro
+
+VannilaJS(Javascript puro)
+
+document.getElementByTagName("h1")
+document.getElementByTagName.classList.add("is-active") //especificação nova
+document.querySelectorAll(".link"); // isso é um seletor css
+
+http://vanilla-js.com/
+
+Estrutura
+<ul>
+	<li>
+		<a class="link"></a>
+	<li>
+	<li>
+
+	<li>
+<ul>
 
 
+Criando elemento com jQuery
+$("<button>").text("#000")
+			 .attr("id","btn") //cria o elemento
+			 .attr({"id":"btn","data-valor":"FFF"}); // mais de um atributo usa o json
+			 .after()
+			 .on("click",function(){}); // adiciona o evento
+			 .one("")//
 
+
+Formato de objeto texto
+
+XML
+
+<pessoa>
+	<nome> munhra </nome>
+	<idade> 34 </idade>
+	<genero> Masculino </genero>
+</pessoa> 
+
+
+JSON
+
+object = 
+{
+	"nome":"munhra",
+	"idade":34,
+	"genero":"M"
+}
+
+declarando RGEX
+var regex = / / 
 
 *****************
 Just a linkedin test
