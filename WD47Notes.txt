@@ -307,6 +307,10 @@ $_span.style.display = "block"; // muda para block
 
 $_p.insertBefore($span);
 
+
+
+
+
 ********************
 Just a linkedin test
 
