@@ -439,8 +439,15 @@ $("#btn").on("click",function(event){
 AJAX
 
 - Objeto XMLHttpRequest
-- Com o jQuery dá para fazer 
+- Com o jQuery dá para fazer uma requisição para algum servidor, 
+  o comando abaixo gera uma requisição sem alterar toda a página
+- Dois tipos de ajax asyncrono e syncrono, por padrão o jQuery 
+  faz requisições assincronas
 
 $.getJSON("http://meuservico",function(resp){
-	
+	// o resp vem com o json equivalente ao urlImg
+	resp.each(function(){
+
+		
+	});
 });
