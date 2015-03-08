@@ -477,3 +477,42 @@ var myEvent = new CustomEvent("ligar");
 dá para criar o evento com mais elementos
 
 new CustomEvent("Ligar",{"corligado":"#00F","cordesligado":"#00"})
+
+Objetos
+=======
+
+// não tem como fazer um new no objeto json
+
+var pessoa = {"nome":"munhra",
+              "idade":"34",
+              "email":"rafael.munhoz@gmail.com",
+              "falar":function(){
+              	console.info("Diz alguma coisa !");
+              }
+};
+
+
+// construtor em javascript pode usar a palavra reservada new aqui
+function Pessoa(nome,email,idade){
+	this.nome = nome || "Ninguem" // se o nome é falso vai para o proximo
+	this.email = email || "nada@nada.com.br" // inicializando com default
+	this.idade = idade || 0; // inicializando com 0
+
+	this.falar = function(){
+		console.err("Inside function of object");
+	}
+}
+
+// criando o objeto
+var pessoa = new Pessoa("munhra","rafael.munhoz@gmail.com.br","34");
+
+
+this
+====
+
+
+
+
+
+prototype
+=========

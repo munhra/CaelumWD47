@@ -10,9 +10,11 @@ for (var i = 0; i < inputs.length ; i ++) {
 		console.log(spanValorUnitario.textContent);
 		var spanValorTotal = spans[1];
 		var quantidade = input.value;
-		var valorUnitario = realParaNumber(spanValorUnitario.textContent);
+		
+		
+		var valorUnitario = formatadorMoeda.realParaNumber(spanValorUnitario.textContent);
 		var novoTotal = quantidade * valorUnitario;
-		spanValorTotal.textContent = numberParaReal(novoTotal);
+		spanValorTotal.textContent = formatadorMoeda.numberParaReal(novoTotal);
 		console.log(novoTotal);
 	});
 };
