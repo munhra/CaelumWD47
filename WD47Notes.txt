@@ -397,3 +397,50 @@ Worked since middle 2014 on a Content Management System, using nodejs, angular a
 For this project is required to
 study some 
 
+
+08/03/2015
+
+Pode escrever javascript dentro do jQuery que não tem problema
+Incluindo imagens
+
+exemplo do html, que vai ser replicado
+<ul id=lista>
+	<li>
+	
+		<figure>
+			<img src="img/ex1.png" alt="Legenda1">
+			<figcaption> Legenda </figcaption>
+		</figure>	
+	
+	</li>
+</ul>
+
+$("#btn").on("click",function(event){
+	//$("#container").addClass("is-active"); jQuery
+	
+	var $lista=$("#lista");
+	var urlImg = [{"src":"img/ex5.png",
+				   "figcaption":"Legenda5"}, 	
+	              {"src":"img/ex6.png",
+	               "figcaption":"Legenda6"}];
+
+
+
+	var $item = $lista.find("li:first-child").clone(); //pseudo seletor
+	
+	for(var i  = 0; i < urlImg.length; i++){
+		$item.find("img").attr({"src":urlImg[i].src,"alt":urlImg[i].figcaption}); //
+ 		$item.find("figcaption").text(urlImg[i].figcaption);
+		$lista.append($item);
+	}
+
+});
+
+AJAX
+
+- Objeto XMLHttpRequest
+- Com o jQuery dá para fazer 
+
+$.getJSON("http://meuservico",function(resp){
+	
+});
