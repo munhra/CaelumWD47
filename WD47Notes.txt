@@ -446,8 +446,12 @@ AJAX
 
 $.getJSON("http://meuservico",function(resp){
 	// o resp vem com o json equivalente ao urlImg
-	resp.each(function(){
+	
 
-		
+	resp.each(function(){
+		this // é cada elemento 
+
 	});
 });
+
+JSONP -> requisição em outro dominio (é um protocolo)
