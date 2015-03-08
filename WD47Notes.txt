@@ -455,3 +455,25 @@ $.getJSON("http://meuservico",function(resp){
 });
 
 JSONP -> requisição em outro dominio (é um protocolo)
+
+Eventos customizados
+
+if(document.querySelector("img")){
+	
+	var $ul = document.querySelectorAll("ul");	
+	$ul.dispatchEvent("Ligar");
+
+} 
+
+
+$ul.addEventListener("Ligar",function(){
+	
+	this.classList.toggle("luzligado");
+
+})
+
+var myEvent = new CustomEvent("ligar");
+
+dá para criar o evento com mais elementos
+
+new CustomEvent("Ligar",{"corligado":"#00F","cordesligado":"#00"})
